@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\**" />
+    <Compile Remove="Utilities\Resources\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <EmbeddedResource Remove="Utilities\Resources\**" />
+    <None Remove="Resources\**" />
+    <None Remove="Utilities\Resources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\DBHelperParameterCache.cs" />
+    <Compile Remove="Logging\IDataReaderProxy.cs" />
+    <Compile Remove="Logging\IDbCommandProxy.cs" />
+    <Compile Remove="Logging\IDbConnectionProxy.cs" />
+    <Compile Remove="Utilities\DBHelperParameterCache.cs" />
+    <Compile Remove="Utilities\Objects\Members\MemberAccessorFactory.cs" />
+    <Compile Remove="Utilities\Resources.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migration\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
